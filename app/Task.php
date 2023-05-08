@@ -14,7 +14,7 @@ class Task extends Model
 
     public function checklist()
     {
-        return $this->hasOne('App\Checklist','checklist_id','id');
+        return $this->belongsTo('App\Checklist','checklist_id','id');
     }
 
     public function user()
