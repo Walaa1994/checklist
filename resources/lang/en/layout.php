@@ -2,6 +2,6 @@
 
 return [
     "home" => "Home",
-    "brand-text" => "Namaa",
+    "brand-text" => "Brand",
     "nav-header-checklists" => "Checklists"
 ];
