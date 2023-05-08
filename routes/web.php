@@ -15,7 +15,7 @@ Auth::routes();
 
 Route::get('/', function () {
     return view('login');
-})->name('login');
+})->name('customLogin');
 
 
 Route::group(['middleware' => ['auth']], function() {
