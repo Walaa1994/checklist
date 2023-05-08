@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Checklist;
+use App\Http\Requests\StoreChecklist;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use DataTables;
@@ -41,7 +42,7 @@ class ChecklistController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request){
+    public function store(StoreChecklist $request){
 
         if($request->checklist_id){
             Checklist::where('id', $request->checklist_id)->update(['name' => $request->name, 'description' => $request->description,'updated_by' => Auth::user()->id]);
