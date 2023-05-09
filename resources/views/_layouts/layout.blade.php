@@ -24,6 +24,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     @yield('style')
+    @routes
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">

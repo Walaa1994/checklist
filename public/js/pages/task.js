@@ -154,7 +154,7 @@ $('#createNewTask').click(function () {
 
 $('body').on('click', '.editTask', function () {
     var task_id = $(this).data('id');
-    $.get("{{ route('tasks.index') }}" +'/' + task_id +'/edit', function (data) {
+    $.get(route('tasks.index') +'/' + task_id +'/edit', function (data) {
         $('#modelHeading').html("Edit Task");
         $('#saveBtn').val("edit-Task");
         $('#ajaxModel').modal('show');
@@ -172,7 +172,7 @@ $('#saveBtn').click(function (e) {
 
     $.ajax({
         data: $('#TaskForm').serialize(),
-        url: "{{ route('tasks.store') }}",
+        url: route('tasks.store'),
         type: "POST",
         dataType: 'json',
         success: function (data) {
@@ -200,7 +200,7 @@ $('body').on('click', '.deleteTask', function () {
     if(r == true){
         $.ajax({
             type: "DELETE",
-            url: "{{ route('tasks.store') }}"+'/'+task_id,
+            url: route('tasks.store')+'/'+task_id,
             success: function (data) {
                 toastr.success(data.success);
                 getTasks();
@@ -213,3 +213,4 @@ $('body').on('click', '.deleteTask', function () {
         });
     }
 });
+

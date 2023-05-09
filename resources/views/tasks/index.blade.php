@@ -94,5 +94,6 @@
 @endsection
 
 @section('scripts')
-    @include('JS.JStask')
+{{--    @include('JS.JStask')--}}
+<script src="{{asset('js/pages/task.js')}}"></script>
 @endsection
