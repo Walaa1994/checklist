@@ -1,12 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc033bef-8d68-40dd-87c9-0a1b605d6c01" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="bc033bef-8d68-40dd-87c9-0a1b605d6c01" name="Default Changelist" comment="add form request for store checklist">
+      <change beforePath="$PROJECT_DIR$/.idea/namaa.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/namaa.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ChecklistController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ChecklistController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/layout.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/layout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/pages/checklist.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/pages/checklist.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
+    <list id="060c8bb8-3ae7-4689-9369-b4767d2c6e59" name="Revert &quot;add form request validation for checklist store&quot;" comment="" />
+    <list id="796432b9-ab8c-44dc-a34d-ca5ba529711d" name="Revert &quot;Fix redirect unauthenticated request&quot;" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -107,6 +135,7 @@
       <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
       <path value="$PROJECT_DIR$/vendor/symfony/http-client-contracts" />
       <path value="$PROJECT_DIR$/vendor/yajra/laravel-datatables-oracle" />
+      <path value="$PROJECT_DIR$/vendor/tightenco/ziggy" />
     </include_path>
   </component>
   <component name="ProjectId" id="1qVu4yGtR5C9Q6UGwwzhl61Oik9" />
@@ -133,6 +162,8 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="bc033bef-8d68-40dd-87c9-0a1b605d6c01" name="Default Changelist" comment="" />
+      <changelist id="060c8bb8-3ae7-4689-9369-b4767d2c6e59" name="Revert &quot;add form request validation for checklist store&quot;" comment="" />
+      <changelist id="796432b9-ab8c-44dc-a34d-ca5ba529711d" name="Revert &quot;Fix redirect unauthenticated request&quot;" comment="" />
       <created>1617176890471</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -140,7 +171,7 @@
       <workItem from="1617176895758" duration="96748000" />
       <workItem from="1682777700550" duration="13002000" />
       <workItem from="1683535570761" duration="694000" />
-      <workItem from="1683536567015" duration="2494000" />
+      <workItem from="1683536567015" duration="22219000" />
     </task>
     <task id="LOCAL-00001" summary="Fix redirect unauthenticated request">
       <created>1683541209055</created>
@@ -149,24 +180,154 @@
       <option name="project" value="LOCAL" />
       <updated>1683541209055</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Change brand text">
+      <created>1683541243106</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1683541243106</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add form request validation for checklist store">
+      <created>1683541343898</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1683541343898</updated>
+    </task>
+    <task id="LOCAL-00004" summary="git changes">
+      <created>1683541364456</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1683541364456</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Revert &quot;Fix redirect unauthenticated request&quot;&#10;&#10;This reverts commit cc07e6fa">
+      <created>1683544331585</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1683544331585</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Revert &quot;add form request validation for checklist store&quot;&#10;&#10;This reverts commit f54f7fd3">
+      <created>1683544373554</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1683544373557</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Optimize one to many relation (inverse)">
+      <created>1683544934708</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1683544934708</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Fix redirect unauthenticated request">
+      <created>1683545016936</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1683545016936</updated>
+    </task>
+    <task id="LOCAL-00009" summary="optimize js file with Ziggy pkg">
+      <created>1683623717705</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1683623717705</updated>
+    </task>
+    <task id="LOCAL-00010" summary="add form request for store checklist">
+      <created>1683702650397</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1683702650397</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="Change brand text" />
+    <MESSAGE value="add form request validation for checklist store" />
+    <MESSAGE value="git changes" />
+    <MESSAGE value="Revert &quot;Fix redirect unauthenticated request&quot;&#10;&#10;This reverts commit cc07e6fa" />
+    <MESSAGE value="Revert &quot;add form request validation for checklist store&quot;&#10;&#10;This reverts commit f54f7fd3" />
+    <MESSAGE value="Optimize one to many relation (inverse)" />
     <MESSAGE value="Fix redirect unauthenticated request" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix redirect unauthenticated request" />
+    <MESSAGE value="optimize js file with Ziggy pkg" />
+    <MESSAGE value="add form request for store checklist" />
+    <option name="LAST_COMMIT_MESSAGE" value="add form request for store checklist" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1683894073589">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1683894073589" />
+    <state x="323" y="0" key="CommitChangelistDialog2" timestamp="1683702724854">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="323" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1683702724854" />
+    <state x="144" y="55" width="1092" height="610" key="DiffContextDialog" timestamp="1683895081127">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="144" y="55" width="1092" height="610" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1683895081127" />
     <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1682852552846">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1682852552846" />
-    <state x="390" y="99" width="585" height="530" key="find.popup" timestamp="1682835282421">
+    <state x="525" y="66" key="RollbackChangesDialog" timestamp="1683895083337">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="390" y="99" width="585" height="530" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1682835282421" />
+    <state x="525" y="66" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1683895083337" />
+    <state x="530" y="278" key="VCS.ChangelistChooser" timestamp="1683544487423">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="530" y="278" key="VCS.ChangelistChooser/0.0.1366.728@0.0.1366.728" timestamp="1683544487423" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1683702717285">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1683702717285" />
+    <state x="492" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1683623746667">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="492" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1683623746667" />
+    <state x="723" y="56" width="585" height="530" key="find.popup" timestamp="1683896326230">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="723" y="56" width="585" height="530" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1683896326230" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1683621179036">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1683621179036" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1683894136146">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1683894136146" />
   </component>
 </project>

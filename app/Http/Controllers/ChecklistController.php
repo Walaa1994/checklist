@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Checklist;
 use App\Http\Requests\StoreChecklist;
+use App\Http\Requests\UpdateChecklist;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use DataTables;
@@ -44,13 +45,9 @@ class ChecklistController extends Controller
      */
     public function store(StoreChecklist $request){
 
-        if($request->checklist_id){
-            Checklist::where('id', $request->checklist_id)->update(['name' => $request->name, 'description' => $request->description,'updated_by' => Auth::user()->id]);
-        }else{
-            Checklist::Create(['name' => $request->name, 'description' => $request->description, 'created_by' => Auth::user()->id]);
-        }
+        Checklist::Create(['name' => $request->name, 'description' => $request->description, 'created_by' => Auth::user()->id]);
 
-        return response()->json(['success'=>'Checklist saved successfully.']);
+        return response()->json(['success'=>'Checklist created successfully.']);
     }
 
     /**
@@ -59,10 +56,22 @@ class ChecklistController extends Controller
      * @param  \App\Checklist  $checklist
      * @return \Illuminate\Http\Response
      */
-    public function edit($id){
+    public function edit(Checklist $checklist){
 
-        $checklist = Checklist::find($id);
         return response()->json($checklist);
+    }
+
+    /**
+     * Update an existing resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function update(UpdateChecklist $request, Checklist $checklist){
+
+        $checklist->update(['name' => $request->name, 'description' => $request->description,'updated_by' => Auth::user()->id]);
+
+        return response()->json(['success'=>'Checklist updated successfully.']);
     }
 
     /**
@@ -71,9 +80,9 @@ class ChecklistController extends Controller
      * @param  \App\Checklist  $checklist
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Checklist $checklist)
     {
-        Checklist::find($id)->delete();
+        $checklist->delete();
 
         return response()->json(['success'=>'Checklist deleted successfully.']);
     }

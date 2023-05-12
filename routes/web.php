@@ -32,5 +32,5 @@ Route::group(['middleware' => ['auth']], function() {
 
 });
 
-Route::resource('ajaxproducts','ProductAjaxController');
+//Route::resource('ajaxproducts','ProductAjaxController');
 

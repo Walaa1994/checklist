@@ -43,24 +43,36 @@ $(function () {
     $('#saveBtn').click(function (e) {
         e.preventDefault();
         $(this).html('Sending..');
+        let btnVal = e.target.value;
+        let type,url;
+        //check save button if create or update
+        if(btnVal == "create-checklist"){
+            type = 'POST';
+            url = route('checklists.store');
+        }else{
+            let checklist_id = $('#checklist_id').val();
+            type = 'PUT';
+            url = route('checklists.update',checklist_id);
+        }
 
         $.ajax({
             data: $('#ChecklistForm').serialize(),
-            url: route('checklists.store'),
-            type: "POST",
+            url: url,
+            type: type,
             dataType: 'json',
             success: function (data) {
-
                 $('#ChecklistForm').trigger("reset");
                 $('#ajaxModel').modal('hide');
                 table.draw();
                 getChecklists();
                 toastr.success(data.success);
-
+                $('#saveBtn').html('Save Changes');
             },
             error: function (data) {
-                toastr.error("Please fill all the fields");
-                console.log('Error:', data);
+                let response = JSON.parse(data.responseText)
+                $.each( response.errors, function( key, value) {
+                    toastr.error(value[0]);
+                });
                 $('#saveBtn').html('Save Changes');
             }
         });
