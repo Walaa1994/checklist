@@ -28,7 +28,7 @@ class UpdateChecklist extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|unique:checklists|max:255',
+            'name' => 'required|unique:checklists,name,NULL,NULL,deleted_at,NULL|max:255',
             'description' => 'required',
         ];
     }
