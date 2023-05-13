@@ -25,9 +25,10 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc033bef-8d68-40dd-87c9-0a1b605d6c01" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/DOCUMENTATION.txt" afterDir="false" />
+    <list default="true" id="bc033bef-8d68-40dd-87c9-0a1b605d6c01" name="Default Changelist" comment="Add Documentation file for project">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/UserSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/UserSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation.txt" beforeDir="false" afterPath="$PROJECT_DIR$/documentation.txt" afterDir="false" />
     </list>
     <list id="060c8bb8-3ae7-4689-9369-b4767d2c6e59" name="Revert &quot;add form request validation for checklist store&quot;" comment="" />
     <list id="796432b9-ab8c-44dc-a34d-ca5ba529711d" name="Revert &quot;Fix redirect unauthenticated request&quot;" comment="" />
@@ -168,7 +169,7 @@
       <workItem from="1617176895758" duration="96748000" />
       <workItem from="1682777700550" duration="13002000" />
       <workItem from="1683535570761" duration="694000" />
-      <workItem from="1683536567015" duration="39878000" />
+      <workItem from="1683536567015" duration="40763000" />
     </task>
     <task id="LOCAL-00001" summary="Fix redirect unauthenticated request">
       <created>1683541209055</created>
@@ -282,7 +283,21 @@
       <option name="project" value="LOCAL" />
       <updated>1683993250338</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Add Documentation file for project">
+      <created>1684000814877</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1684000814877</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Add Documentation file for project">
+      <created>1684000976799</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1684000976799</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -327,17 +342,18 @@
     <MESSAGE value="Add the authentication(login,register) by Laravel ui pkg" />
     <MESSAGE value="Fix logout problem" />
     <MESSAGE value="add policy for update and delete actions on checklist" />
-    <option name="LAST_COMMIT_MESSAGE" value="add policy for update and delete actions on checklist" />
+    <MESSAGE value="Add Documentation file for project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Documentation file for project" />
   </component>
   <component name="WindowStateProjectService">
     <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1683894073589">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1683894073589" />
-    <state x="323" y="0" key="CommitChangelistDialog2" timestamp="1683993248489">
+    <state x="323" y="0" key="CommitChangelistDialog2" timestamp="1684001587703">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="323" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1683993248489" />
+    <state x="323" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1684001587703" />
     <state x="144" y="55" width="1092" height="610" key="DiffContextDialog" timestamp="1683993238371">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -354,10 +370,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="530" y="278" key="VCS.ChangelistChooser/0.0.1366.728@0.0.1366.728" timestamp="1683544487423" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1683993255454">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1684001675049">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1683993255454" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1684001675049" />
     <state x="492" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1683623746667">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
