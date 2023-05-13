@@ -14,8 +14,8 @@
 Auth::routes();
 
 Route::get('/', function () {
-    return view('login');
-})->name('customLogin');
+    return view('auth.login');
+})->name('test');
 
 
 Route::group(['middleware' => ['auth']], function() {
@@ -34,3 +34,6 @@ Route::group(['middleware' => ['auth']], function() {
 
 //Route::resource('ajaxproducts','ProductAjaxController');
 
+
+
+//Route::get('/home', 'HomeController@index')->name('home');
