@@ -70,9 +70,14 @@ $(function () {
             },
             error: function (data) {
                 let response = JSON.parse(data.responseText)
-                $.each( response.errors, function( key, value) {
-                    toastr.error(value[0]);
-                });
+                if(data.status == 403){
+                    toastr.error(response.message);
+                }else{
+                    $.each( response.errors, function( key, value) {
+                        toastr.error(value[0]);
+                    });
+                }
+
                 $('#saveBtn').html('Save Changes');
             }
         });
@@ -93,8 +98,8 @@ $(function () {
                     toastr.success(data.success);
                 },
                 error: function (data) {
-                    toastr.error("There is something error");
-                    console.log('Error:', data);
+                    let response = JSON.parse(data.responseText)
+                    toastr.error(response.message);
                 }
             });
         }

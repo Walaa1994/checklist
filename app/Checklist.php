@@ -20,12 +20,12 @@ class Checklist extends Model
 
     public function completedTasks()
     {
-        return $this->hasMany('App\Task','checklist_id','id')->where('status',1);
+        return $this->tasks()->where('status',1);
     }
 
     public function uncompletedTasks()
     {
-        return $this->hasMany('App\Task','checklist_id','id')->where('status',0);
+        return $this->tasks()->where('status',0);
     }
 
     public function user()

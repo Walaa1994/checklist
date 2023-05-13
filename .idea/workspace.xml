@@ -25,17 +25,14 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc033bef-8d68-40dd-87c9-0a1b605d6c01" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/namaa.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/namaa.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="bc033bef-8d68-40dd-87c9-0a1b605d6c01" name="Default Changelist" comment="Fix logout problem">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/_layouts/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/_layouts/layout.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Checklist.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Checklist.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ChecklistController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ChecklistController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/UpdateChecklist.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/UpdateChecklist.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/pages/checklist.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/pages/checklist.js" afterDir="false" />
     </list>
     <list id="060c8bb8-3ae7-4689-9369-b4767d2c6e59" name="Revert &quot;add form request validation for checklist store&quot;" comment="" />
     <list id="796432b9-ab8c-44dc-a34d-ca5ba529711d" name="Revert &quot;Fix redirect unauthenticated request&quot;" comment="" />
@@ -176,7 +173,7 @@
       <workItem from="1617176895758" duration="96748000" />
       <workItem from="1682777700550" duration="13002000" />
       <workItem from="1683535570761" duration="694000" />
-      <workItem from="1683536567015" duration="29421000" />
+      <workItem from="1683536567015" duration="38198000" />
     </task>
     <task id="LOCAL-00001" summary="Fix redirect unauthenticated request">
       <created>1683541209055</created>
@@ -269,7 +266,21 @@
       <option name="project" value="LOCAL" />
       <updated>1683908573994</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Add the authentication(login,register) by Laravel ui pkg">
+      <created>1683973854248</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1683973854248</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Fix logout problem">
+      <created>1683981098242</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1683981098242</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -311,52 +322,54 @@
     <MESSAGE value="seperate store &amp; Update checklist functions" />
     <MESSAGE value="add form request validation on update process" />
     <MESSAGE value="Optimize checklist name to be unique without trashed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Optimize checklist name to be unique without trashed" />
+    <MESSAGE value="Add the authentication(login,register) by Laravel ui pkg" />
+    <MESSAGE value="Fix logout problem" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix logout problem" />
   </component>
   <component name="WindowStateProjectService">
     <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1683894073589">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1683894073589" />
-    <state x="323" y="0" key="CommitChangelistDialog2" timestamp="1683908572464">
+    <state x="323" y="0" key="CommitChangelistDialog2" timestamp="1683991355556">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="323" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1683908572464" />
-    <state x="144" y="55" width="1092" height="610" key="DiffContextDialog" timestamp="1683971311513">
+    <state x="323" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1683991355556" />
+    <state x="144" y="55" width="1092" height="610" key="DiffContextDialog" timestamp="1683991377376">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="144" y="55" width="1092" height="610" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1683971311513" />
+    <state x="144" y="55" width="1092" height="610" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1683991377376" />
     <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1682852552846">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1682852552846" />
-    <state x="525" y="66" key="RollbackChangesDialog" timestamp="1683971315651">
+    <state x="525" y="66" key="RollbackChangesDialog" timestamp="1683991378246">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="525" y="66" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1683971315651" />
+    <state x="525" y="66" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1683991378246" />
     <state x="530" y="278" key="VCS.ChangelistChooser" timestamp="1683544487423">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="530" y="278" key="VCS.ChangelistChooser/0.0.1366.728@0.0.1366.728" timestamp="1683544487423" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1683908577087">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1683973888107">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1683908577087" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1683973888107" />
     <state x="492" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1683623746667">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="492" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1683623746667" />
-    <state x="723" y="56" width="585" height="530" key="find.popup" timestamp="1683973501977">
+    <state x="723" y="56" width="585" height="530" key="find.popup" timestamp="1683993050153">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="723" y="56" width="585" height="530" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1683973501977" />
+    <state x="723" y="56" width="585" height="530" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1683993050153" />
     <state x="339" y="162" key="run.anything.popup" timestamp="1683621179036">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1683621179036" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1683894136146">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1683991896139">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1683894136146" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1683991896139" />
   </component>
 </project>

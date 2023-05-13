@@ -69,6 +69,8 @@ class ChecklistController extends Controller
      */
     public function update(UpdateChecklist $request, Checklist $checklist){
 
+        $this->authorize('update', $checklist);
+
         $checklist->update(['name' => $request->name, 'description' => $request->description,'updated_by' => Auth::user()->id]);
 
         return response()->json(['success'=>'Checklist updated successfully.']);
@@ -82,6 +84,7 @@ class ChecklistController extends Controller
      */
     public function destroy(Checklist $checklist)
     {
+        $this->authorize('delete', $checklist);
         $checklist->delete();
 
         return response()->json(['success'=>'Checklist deleted successfully.']);
@@ -99,7 +102,7 @@ class ChecklistController extends Controller
     }
 
     public function getChecklists (){
-        $checklists = Checklist::all();
+        $checklists = Auth::user()->checklists;
         return response()->json(['checklists'=> $checklists]);
     }
 }

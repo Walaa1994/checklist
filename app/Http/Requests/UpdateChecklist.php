@@ -15,9 +15,10 @@ class UpdateChecklist extends FormRequest
      */
     public function authorize()
     {
-        $checklist = Checklist::find($this->checklist_id);
-
-        return Auth::user()->id === $checklist->created_by;
+//        $checklist = Checklist::find($this->checklist_id);
+//
+//        return Auth::user()->id === $checklist->created_by;
+        return true;
     }
 
     /**
