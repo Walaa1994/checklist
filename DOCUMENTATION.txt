@@ -1,12 +1,18 @@
-إعداد  Checklist
+Checklist Management Project:
 
-يتضمن المشروع التالي إمكانية إنشاء قوائم Checklists، تحوي كل قائمة على مجموعة من المهام Tasks.
-تم تنفيذ الخواص التالية ضمن المشروع:
-•	إمكانية إضافة، وتعديل، وحذف قوائم المهام Checklists باستخدام الـ Ajax مع معالجة واجهة الـ Checklists Datatable.
-•	إمكانية إضافة، وتعديل، وحذف المهام Tasks من قوائم المهام Checklists باستخدام الـ Ajax مع معالجة واجهة الـ Task List.
-•	إمكانية تحديد المهام بـ "تم" عند إنجاز أحدها من قبل المستخدم Checkbox مع إظهارتاريخ الإنتهاء.
-•	إمكانية إخفاء وإظهار المهام المنجزة، ضمن قوائم المهام من خلال Show Completed Switch Button.
-•	عرض مخطط رسومي يوضح المهام المنجزة بالمقارنة مع عدد المهام الكلي.
+This project includes the ability to create Checklists, each Checklist contains a set of tasks.
+The following features have been implemented within the project:
+• An interface for creating an account or logging in that provides the authorization for the project.
+• The possibility of adding, modifying, and deleting checklists using Ajax with the processing of the Checklists Datatable interface.
+• The possibility of adding, modifying, and deleting tasks from checklists using Ajax with the processing of the Task List interface.
+• The ability to mark tasks as "done" when one of them is completed by the user, with the end date shown.
+• The ability to hide and show completed tasks within the task lists through the 'Show Completed' switch button.
+• View a graphical chart showing the completed tasks compared to the total number of tasks.
 
-قاعدة البيانات:
-و كل الجداول سوف يتم إنشاؤها عن طريق الـ migrations.
+Database:
+All tables will be created through migrations.
+
+There is a seeder to create the following user within the database:
+Email: admin@gmail.com
+Password: password
+

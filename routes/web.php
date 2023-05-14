@@ -15,7 +15,7 @@ Auth::routes();
 
 Route::get('/', function () {
     return view('auth.login');
-})->name('test');
+});
 
 
 Route::group(['middleware' => ['auth']], function() {
