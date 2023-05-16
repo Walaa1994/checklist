@@ -27,9 +27,9 @@
   <component name="ChangeListManager">
     <list default="true" id="bc033bef-8d68-40dd-87c9-0a1b605d6c01" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOCUMENTATION.txt" beforeDir="false" afterPath="$PROJECT_DIR$/DOCUMENTATION.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TaskController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TaskController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/pages/checklist.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/pages/checklist.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/pages/task.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/pages/task.js" afterDir="false" />
     </list>
     <list id="060c8bb8-3ae7-4689-9369-b4767d2c6e59" name="Revert &quot;add form request validation for checklist store&quot;" comment="" />
     <list id="796432b9-ab8c-44dc-a34d-ca5ba529711d" name="Revert &quot;Fix redirect unauthenticated request&quot;" comment="" />
@@ -170,7 +170,7 @@
       <workItem from="1617176895758" duration="96748000" />
       <workItem from="1682777700550" duration="13002000" />
       <workItem from="1683535570761" duration="694000" />
-      <workItem from="1683536567015" duration="42088000" />
+      <workItem from="1683536567015" duration="44197000" />
     </task>
     <task id="LOCAL-00001" summary="Fix redirect unauthenticated request">
       <created>1683541209055</created>
@@ -305,7 +305,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684001704704</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Some improvements">
+      <created>1684043081937</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1684043081937</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -352,17 +359,18 @@
     <MESSAGE value="add policy for update and delete actions on checklist" />
     <MESSAGE value="Add Documentation file for project" />
     <MESSAGE value="Update Documentation file for project and UserSeeder" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update Documentation file for project and UserSeeder" />
+    <MESSAGE value="Some improvements" />
+    <option name="LAST_COMMIT_MESSAGE" value="Some improvements" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1683894073589">
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1684225452421">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1683894073589" />
-    <state x="323" y="0" key="CommitChangelistDialog2" timestamp="1684001703166">
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1684225452421" />
+    <state x="323" y="0" key="CommitChangelistDialog2" timestamp="1684043080343">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="323" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1684001703166" />
+    <state x="323" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1684043080343" />
     <state x="144" y="55" width="1092" height="610" key="DiffContextDialog" timestamp="1683993238371">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -379,10 +387,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="530" y="278" key="VCS.ChangelistChooser/0.0.1366.728@0.0.1366.728" timestamp="1683544487423" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1684001706188">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1684043087733">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1684001706188" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1684043087733" />
     <state x="492" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1683623746667">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -391,13 +399,13 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="723" y="56" width="585" height="530" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1683993050153" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1683621179036">
+    <state x="339" y="162" key="run.anything.popup" timestamp="1684226474669">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1683621179036" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1684042256195">
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1684226474669" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1684225755997">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1684042256195" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1684225755997" />
   </component>
 </project>

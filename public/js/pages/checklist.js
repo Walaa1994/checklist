@@ -91,7 +91,7 @@ $(function () {
         if(r == true){
             $.ajax({
                 type: "DELETE",
-                url: route('checklists.store')+'/'+checklist_id,
+                url: route('checklists.destroy',checklist_id),
                 success: function (data) {
                     table.draw();
                     getChecklists();

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Checklist;
+use App\Http\Requests\StoreTask;
+use App\Http\Requests\UpdateTask;
 use App\Task;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -45,13 +47,11 @@ class TaskController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request){
-        if($request->task_id){
-            Task::find($request->task_id)->Update(['name' => $request->name, 'description' => $request->description,'start_date' =>$request->start_date, 'estimate_date' =>$request->estimate_date,'updated_by' => Auth::user()->id]);
-        }else{
-            Task::Create( ['checklist_id' =>$request->checklist_id, 'name' => $request->name, 'description' => $request->description,'status' => 0,'start_date' =>$request->start_date, 'estimate_date' =>$request->estimate_date,'created_by' => Auth::user()->id]);
-        }
-        return response()->json(['success'=>'Task saved successfully.']);
+    public function store(StoreTask $request){
+
+        Task::Create( ['checklist_id' =>$request->checklist_id, 'name' => $request->name, 'description' => $request->description,'status' => 0,'start_date' =>$request->start_date, 'estimate_date' =>$request->estimate_date,'created_by' => Auth::id()]);
+
+        return response()->json(['success'=>'Task created successfully.']);
     }
 
     /**
@@ -60,10 +60,24 @@ class TaskController extends Controller
      * @param  \App\Task  $task
      * @return \Illuminate\Http\Response
      */
-    public function edit($id){
+    public function edit(Task $task){
 
-        $task = Task::find($id);
         return response()->json($task);
+    }
+
+    /**
+     * Update an existing resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function update(UpdateTask $request, Task $task){
+
+        $this->authorize('update', $task);
+
+        Task::find($request->task_id)->Update(['name' => $request->name, 'description' => $request->description,'start_date' =>$request->start_date, 'estimate_date' =>$request->estimate_date,'updated_by' => Auth::id()]);
+
+        return response()->json(['success'=>'Task updated successfully.']);
     }
 
     /**
@@ -72,9 +86,10 @@ class TaskController extends Controller
      * @param  \App\Task  $task
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Task $task)
     {
-        Task::find($id)->delete();
+        $this->authorize('delete', $task);
+        $task->delete();
 
         return response()->json(['success'=>'Task deleted successfully.']);
     }

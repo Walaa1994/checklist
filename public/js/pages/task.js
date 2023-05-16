@@ -156,7 +156,7 @@ $('body').on('click', '.editTask', function () {
     var task_id = $(this).data('id');
     $.get(route('tasks.index') +'/' + task_id +'/edit', function (data) {
         $('#modelHeading').html("Edit Task");
-        $('#saveBtn').val("edit-Task");
+        $('#saveBtn').val("edit-task");
         $('#ajaxModel').modal('show');
         $('#task_id').val(data.id);
         $('#name').val(data.name);
@@ -170,10 +170,22 @@ $('#saveBtn').click(function (e) {
     e.preventDefault();
     $(this).html('Sending..');
 
+    let btnVal = e.target.value;
+    let type,url;
+    //check save button if create or update
+    if(btnVal == "create-task"){
+        type = 'POST';
+        url = route('tasks.store');
+    }else{
+        let task_id = $('#task_id').val();
+        type = 'PUT';
+        url = route('tasks.update',task_id);
+    }
+
     $.ajax({
         data: $('#TaskForm').serialize(),
-        url: route('tasks.store'),
-        type: "POST",
+        url: url,
+        type: type,
         dataType: 'json',
         success: function (data) {
 
@@ -182,11 +194,17 @@ $('#saveBtn').click(function (e) {
             getTasks();
             updateChart();
             toastr.success(data.success);
-
+            $('#saveBtn').html('Save Changes');
         },
         error: function (data) {
-            console.log('Error:', data);
-            toastr.error("Please fill all the fields");
+            let response = JSON.parse(data.responseText)
+            if(data.status == 403){
+                toastr.error(response.message);
+            }else{
+                $.each( response.errors, function( key, value) {
+                    toastr.error(value[0]);
+                });
+            }
             $('#saveBtn').html('Save Changes');
         }
     });
@@ -200,15 +218,15 @@ $('body').on('click', '.deleteTask', function () {
     if(r == true){
         $.ajax({
             type: "DELETE",
-            url: route('tasks.store')+'/'+task_id,
+            url: route('tasks.destroy',task_id),
             success: function (data) {
                 toastr.success(data.success);
                 getTasks();
                 updateChart()
             },
             error: function (data) {
-                toastr.error("There is something error");
-                console.log('Error:', data);
+                let response = JSON.parse(data.responseText)
+                toastr.error(response.message);
             }
         });
     }
