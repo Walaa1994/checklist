@@ -26,6 +26,8 @@ class StoreTask extends FormRequest
         return [
             'name' => 'required|max:255',
             'description' => 'required',
+            'start_date' => 'required|date',
+            'estimate_date' => 'required|date|after:start_date'
         ];
     }
 }

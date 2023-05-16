@@ -26,15 +26,8 @@ class UpdateTask extends FormRequest
         return [
             'name' => 'required|max:255',
             'description' => 'required',
-        ];
-    }
-
-    public function messages()
-    {
-        return [
-            'name.required' => 'A name is required',
-            'name.max' => 'A checklist name exceeds the max limit',
-            'description.required'  => 'A description is required',
+            'start_date' => 'required|date',
+            'estimate_date' => 'required|date|after:start_date'
         ];
     }
 }
